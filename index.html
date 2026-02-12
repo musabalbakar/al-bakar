@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Albakar | Hygiene & Household Products</title>
+  <meta name="description" content="Albakar – Premium hygiene and household products: facial tissues, wet wipes, dishwashing sponges." />
+
+  <link rel="icon" href="لوغو .. شركة البكار-04.png" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/data.skills.js" defer></script>
+  <script src="js/data.clients.js" defer></script>
+  
+  <script src="js/data.availability.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Floating contact buttons -->
+    <div class="float-actions" aria-label="Contact actions">
+      <a href="tel:+963944419986" class="float-btn float-btn-call" aria-label="Call">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="https://wa.me/+963944419986" target="_blank" rel="noopener" class="float-btn float-btn-whatsapp" aria-label="WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+
+    <header class="header" id="top">
+      <div class="container header-inner">
+        <a href="#top" class="logo">
+          <img src="لوغو .. شركة البكار-04.png" alt="Albakar" class="logo-img" />
+          <div class="logo-text">
+            <span class="logo-title">Albakar</span>
+            <span class="logo-subtitle" data-i18n="meta.tagline">Hygiene & Household</span>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <div class="lang-switcher">
+            <button type="button" class="lang-btn" data-lang="ar" aria-label="Arabic">AR</button>
+            <span class="lang-sep">|</span>
+            <button type="button" class="lang-btn" data-lang="tr" aria-label="Turkish">TR</button>
+            <span class="lang-sep">|</span>
+            <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          </div>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#products" data-i18n="nav.products">Products</a></li>
+            <li><a href="#material" data-i18n="nav.material">Material</a></li>
+            <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section hero" id="hero">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-pattern"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker reveal-up" data-i18n="hero.kicker">Hygiene & Household Products</p>
+          <h1 class="hero-title reveal-up">
+            <span data-i18n="hero.title">Softness you can feel.</span><br />
+            <span data-i18n="hero.titleLine2">Hygiene you can trust.</span>
+          </h1>
+          <p class="hero-subtitle reveal-up" data-i18n="hero.subtitle">Albakar delivers premium tissue, wet wipes and cleaning products for homes and businesses.</p>
+          <div class="hero-actions reveal-up">
+            <a href="#products" class="btn btn-primary" data-i18n="hero.cta">Explore Products</a>
+            <a href="#about" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Learn More</a>
+          </div>
+          <div class="hero-meta reveal-up">
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="hero.metaCertified">Certified</span>
+              <span class="meta-value" data-i18n="hero.metaCertifiedVal">Quality & Hygiene</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="hero.metaServing">Serving</span>
+              <span class="meta-value" data-i18n="hero.metaServingVal">Retail & HoReCa</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card hero-card-main reveal-fade">
+            <div class="hero-card-top">
+              <span class="pill pill-soft" data-i18n="hero.cardPill1">Ultra Soft</span>
+              <span class="pill pill-clean" data-i18n="hero.cardPill2">Dermatologically Tested</span>
+            </div>
+            <div class="hero-packshot">
+              <div class="hero-roll-stack">
+                <div class="roll roll-main"><img src="لوغو .. شركة البكار-04.png" alt="Albakar" /></div>
+               
+              </div>
+              <div class="hero-pack-info">
+                <h3 data-i18n="hero.cardTitle">Albakar PureSoft</h3>
+                <p data-i18n="hero.cardDesc">Everyday tissues for families that care about comfort and cleanliness.</p>
+              </div>
+            </div>
+            <div class="hero-card-bottom">
+              <div class="hero-spec">
+                <span class="hero-spec-label" data-i18n="hero.specLayers">Layers</span>
+                <span class="hero-spec-value" data-i18n="hero.specLayersVal">3-ply</span>
+              </div>
+              <div class="hero-spec">
+                <span class="hero-spec-label" data-i18n="hero.specMaterial">Material</span>
+                <span class="hero-spec-value" data-i18n="hero.specMaterialVal">100% Virgin Pulp</span>
+              </div>
+              <div class="hero-spec">
+                <span class="hero-spec-label" data-i18n="hero.specEco">Eco</span>
+                <span class="hero-spec-value" data-i18n="hero.specEcoVal">Responsible Sourcing</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-floating-card hero-floating-top reveal-fade">
+            <p data-i18n="hero.float1">Gentle on skin, tough on germs.</p>
+          </div>
+          <div class="hero-floating-card hero-floating-bottom reveal-fade">
+            <p data-i18n="hero.float2">Ideal for homes, offices, hotels and clinics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container section-inner two-column">
+        <div class="section-header">
+          <p class="section-kicker reveal-up" data-i18n="about.kicker">About Albakar</p>
+          <h2 class="section-title reveal-up" data-i18n="about.title">Softness engineered for everyday hygiene.</h2>
+          <p class="section-description reveal-up" data-i18n="about.description">Albakar is a hygiene and household products company dedicated to delivering premium tissues, wet wipes and dishwashing solutions.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal-up">
+            <h3 data-i18n="about.card1Title">Quality you can feel</h3>
+            <p data-i18n="about.card1Text">Each Albakar product is crafted for a soft touch that remains strong and durable in everyday use.</p>
+          </div>
+          <div class="about-card reveal-up">
+            <h3 data-i18n="about.card2Title">Hygiene without compromise</h3>
+            <p data-i18n="about.card2Text">Our manufacturing follows strict hygiene standards, delivering products that are safe for sensitive skin.</p>
+          </div>
+          <div class="about-card reveal-up">
+            <h3 data-i18n="about.card3Title">Trusted by partners</h3>
+            <p data-i18n="about.card3Text">From households to hospitality, Albakar serves partners who demand consistent, professional-grade products.</p>
+          </div>
+          <div class="about-card reveal-up">
+            <h3 data-i18n="about.card4Title">Reliable supply</h3>
+            <p data-i18n="about.card4Text">Our capacity and logistics ensure reliable, on-time deliveries across all product lines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills / Experience Section -->
+    <section class="section skills" id="skills">
+      <div class="container section-inner">
+        <div class="section-header">
+          <p class="section-kicker reveal-up" data-i18n="skills.kicker">Experience</p>
+          <h2 class="section-title reveal-up" data-i18n="skills.title">Engineered capabilities for hygiene.</h2>
+          <p class="section-description reveal-up" data-i18n="skills.description">
+            Albakar combines manufacturing, hygiene and supply capabilities to support partners across retail, hospitality and healthcare.
+          </p>
+        </div>
+        <div id="skills-grid" class="skills-grid reveal-up">
+          <!-- Filled by JS from ALB_SKILLS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients / Companies Section -->
+    <section class="section clients" id="clients">
+      <div class="container section-inner">
+        <div class="section-header center">
+          <p class="section-kicker reveal-up" data-i18n="clients.kicker">Partners</p>
+          <h2 class="section-title reveal-up" data-i18n="clients.title">Trusted by businesses across sectors.</h2>
+          <p class="section-description reveal-up" data-i18n="clients.description">
+            From hospitality to healthcare and modern retail, Albakar works with partners who expect consistent quality and reliable supply.
+          </p>
+        </div>
+        <div id="clients-grid" class="clients-grid">
+          <!-- Filled by JS from ALB_CLIENTS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Stories / Case Studies Section -->
+    
+
+    <section class="section products" id="products">
+      <div class="container section-inner">
+        <div class="section-header center">
+          <p class="section-kicker reveal-up" data-i18n="products.kicker">Our Products</p>
+          <h2 class="section-title reveal-up" data-i18n="products.title">A complete range of hygiene solutions.</h2>
+          <p class="section-description reveal-up" data-i18n="products.description">Explore Albakar's portfolio: facial tissues, wet wipes and dishwashing sponges.</p>
+        </div>
+
+        <div class="product-tabs" role="tablist">
+          <button type="button" class="product-tab active" data-category="facial" role="tab" data-i18n="products.tabFacial">Facial tissues</button>
+          <button type="button" class="product-tab" data-category="wet" role="tab" data-i18n="products.tabWet">Wet wipes</button>
+          <button type="button" class="product-tab" data-category="sponge" role="tab" data-i18n="products.tabSponge">Dishwashing sponge</button>
+          <button type="button" class="product-tab" data-category="diapers" role="tab" data-i18n="products.tabDiapers">Baby diapers</button>
+          <button type="button" class="product-tab" data-category="pads" role="tab" data-i18n="products.tabPads">Sanitary pads</button>
+        </div>
+
+        <div id="product-grid" class="product-grid">
+          <!-- Filled by JS from translations -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section material" id="material">
+      <div class="container section-inner">
+        <div class="section-header center">
+          <p class="section-kicker reveal-up" data-i18n="material.kicker">Natural Cellulose Material</p>
+          <h2 class="section-title reveal-up" data-i18n="material.title">Natural Cellulose Material</h2>
+          <p class="section-description reveal-up" data-i18n="material.subtitle">100% natural cellulose</p>
+        </div>
+        <div class="material-content reveal-up">
+          <p class="material-description" data-i18n="material.description">Our products are crafted from 100% natural cellulose, ensuring the highest standards of quality, softness and hygiene.</p>
+        </div>
+        <div class="material-grid">
+          <div class="material-card reveal-up">
+            <div class="material-icon">
+              <span class="icon-circle">🌿</span>
+            </div>
+            <h3 data-i18n="material.feature1Title">100% Natural Cellulose</h3>
+            <p data-i18n="material.feature1Text">Pure, natural cellulose sourced responsibly for superior quality and environmental sustainability.</p>
+          </div>
+          <div class="material-card reveal-up">
+            <div class="material-icon">
+              <span class="icon-circle">📄</span>
+            </div>
+            <h3 data-i18n="material.feature2Title">Two-Ply Structure</h3>
+            <p data-i18n="material.feature2Text">Two-layer (2-ply) construction provides optimal balance between softness, strength and absorption.</p>
+          </div>
+          <div class="material-card reveal-up">
+            <div class="material-icon">
+              <span class="icon-circle">💪</span>
+            </div>
+            <h3 data-i18n="material.feature3Title">Softness & Strength</h3>
+            <p data-i18n="material.feature3Text">Engineered to deliver exceptional softness while maintaining durability and reliability in everyday use.</p>
+          </div>
+          <div class="material-card reveal-up">
+            <div class="material-icon">
+              <span class="icon-circle">✨</span>
+            </div>
+            <h3 data-i18n="material.feature4Title">Hygiene Focus</h3>
+            <p data-i18n="material.feature4Text">Manufactured under strict hygiene standards, ensuring safe and clean products for your family.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations & Availability (World Map) -->
+    <section class="section locations" id="locations">
+      <div class="container section-inner">
+        <div class="section-header center">
+          <p class="section-kicker reveal-up" data-i18n="locations.kicker">Availability</p>
+          <h2 class="section-title reveal-up" data-i18n="locations.title">Where Albakar products are available.</h2>
+          <p class="section-description reveal-up" data-i18n="locations.description">
+            Albakar products are progressively expanding across the region. Hover on the map to see in which countries our portfolio is available.
+          </p>
+        </div>
+        <div id="availability-map" class="availability-map reveal-up">
+          <div class="availability-map-inner">
+            <div class="availability-map-visual">
+              <div class="availability-map-base">
+                <div id="availability-markers" class="availability-markers">
+                  <!-- Markers injected from ALB_AVAILABILITY -->
+                </div>
+              </div>
+            </div>
+            <div class="availability-map-panel">
+              <h3 class="availability-panel-title" data-i18n="locations.panelTitle">Product footprint</h3>
+              <p class="availability-panel-text" data-i18n="locations.panelDescription">
+                Move over the highlighted countries to explore availability and portfolio focus.
+              </p>
+              <div id="availability-selected" class="availability-selected">
+                <!-- Selected country details -->
+              </div>
+              <ul id="availability-list" class="availability-list">
+                <!-- Country list injected from ALB_AVAILABILITY -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container section-inner form-container contact-inner">
+        <div class="contact-content">
+          <p class="section-kicker reveal-up" data-i18n="contact.kicker">Contact</p>
+          <h2 class="section-title reveal-up" data-i18n="contact.title">Let's talk about your needs.</h2>
+          <p class="section-description reveal-up" data-i18n="contact.description">Share your requirements and our team will get back with tailored Albakar solutions.</p>
+          <ul class="contact-highlights">
+            <li class="reveal-up" data-i18n="contact.highlight1">Wholesale and private label opportunities</li>
+            <li class="reveal-up" data-i18n="contact.highlight2">Custom formats for hospitality and healthcare</li>
+            <li class="reveal-up" data-i18n="contact.highlight3">Reliable long-term supply partnerships</li>
+          </ul>
+          <div class="location-grid contact-location-grid">
+            <div class="location-info reveal-up">
+              <p class="location-label" data-i18n="location.address">Company address / industrial area</p>
+              <p class="location-address" data-i18n="location.addressLine1">Albakar Industrial Zone</p>
+              <p class="location-address" data-i18n="location.addressLine2">City, Country</p>
+              <p class="location-contact"><span class="location-meta-label" data-i18n="location.phone">Phone</span> <a href="tel:+963944419986">+963944419986</a></p>
+              <p class="location-contact"><span class="location-meta-label" data-i18n="location.email">Email</span> <a href="mailto:albakarlimited.com">albakarlimited.com</a></p>
+              <div class="location-social">
+                <a href="https://www.instagram.com/bakkartrading?igsh=MXR0NmtyZTF5cDh5Nw%3D%3D" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.facebook.com/albakkar.raqqa?mibextid=wwXIfr&rdid=MoLyRiGUZcKwkCse&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GbDYxZQKm%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCVtSxJhyb5zG2sfYW_BxZ2Q" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper  reveal-up">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name" data-i18n="contact.formName">Full name</label>
+                <input type="text" id="name" name="from_name" data-i18n-placeholder="contact.formNamePlaceholder" placeholder="Enter your name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="company" data-i18n="contact.formCompany">Company</label>
+                <input type="text" id="company" name="company" data-i18n-placeholder="contact.formCompanyPlaceholder" placeholder="Company or organization" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email" data-i18n="contact.formEmail">Business email</label>
+                <input type="email" id="email" name="from_email" data-i18n-placeholder="contact.formEmailPlaceholder" placeholder="name@company.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="message" data-i18n="contact.formMessage">Message</label>
+                <textarea id="message" name="message" rows="4" data-i18n-placeholder="contact.formMessagePlaceholder" placeholder="Tell us about your needs" required></textarea>
+              </div>
+            </div>
+            <div class="form-row form-footer">
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-label" data-i18n="contact.submit">Send message</span>
+                <span class="btn-loader"></span>
+              </button>
+              <p class="form-note" data-i18n="contact.formNote">Connect this form to your backend or email service.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="contact-map-full container reveal-up">
+        <div class="map-placeholder">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6644.471871479481!2d36.605397!3d33.625124!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDM3JzMwLjUiTiAzNsKwMzYnMTEuNiJF!5e0!3m2!1sar!2str!4v1770680765649!5m2!1sar!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="لوغو .. شركة البكار-04.png" alt="Albakar" class="footer-logo" />
+          <span class="footer-title" data-i18n="footer.brand">Albakar – Hygiene & Household</span>
+        </div>
+        <div class="footer-links">
+          <a href="#hero" data-i18n="footer.home">Home</a>
+          <a href="#about" data-i18n="footer.about">About</a>
+          <a href="#products" data-i18n="footer.products">Products</a>
+          <a href="#material" data-i18n="footer.material">Material</a>
+          <a href="#contact" data-i18n="footer.contact">Contact Us</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/bakkartrading?igsh=MXR0NmtyZTF5cDh5Nw%3D%3D" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/albakkar.raqqa?mibextid=wwXIfr&rdid=MoLyRiGUZcKwkCse&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GbDYxZQKm%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCVtSxJhyb5zG2sfYW_BxZ2Q" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> Albakar. <span data-i18n="footer.copyright">All rights reserved.</span></p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
+
