@@ -569,62 +569,46 @@
     const yearSpan = document.getElementById("year");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
   }
-function initContactForm() {
-  const form = document.getElementById("contact-form");
-  if (!form || typeof emailjs === "undefined") return;
 
-  emailjs.init("hhjmASGDBIW9kF7ig"); // ⚠️ غير المفتاح القديم
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // 🛡️ 1) Honeypot check (كشف البوت)
-    if (form.botcheck.value !== "") {
-      alert("Bot detected ❌");
-      return;
-    }
-
-    
-
-    // 🛡️  Rate limit (مرة كل 30 ثانية)
-    const lastTime = localStorage.getItem("lastSendTime");
-    const now = Date.now();
-    if (lastTime && now - lastTime < 30000) {
-      alert("انتظر قليلاً قبل الإرسال مرة أخرى ⏳");
-      return;
-    }
-    localStorage.setItem("lastSendTime", now);
-
-    const btn = form.querySelector(".btn-submit");
-    if (btn) btn.disabled = true;
-
-    Promise.all([
-      // Send to Admin
-      emailjs.sendForm("service_6a5mlge", "template_d72w4o5", form),
-
-      // Auto reply to Client
-      emailjs.sendForm("service_6a5mlge", "template_e3x4jfb", form),
-    ])
-      .then(function () {
-        const lang = getStoredLang();
-        const t = ALBAKAR_TRANSLATIONS[lang];
-
-        alert(t.contact.success);
-        form.reset();
-        grecaptcha.reset(); // إعادة تعيين الكابتشا
-      })
-      .catch(function (error) {
-        const lang = getStoredLang();
-        const t = ALBAKAR_TRANSLATIONS[lang];
-
-        alert(t.contact.error);
-        console.error(error);
-      })
-      .finally(function () {
-        if (btn) btn.disabled = false;
-      });
-  });
-}
+  function initContactForm() {
+    const form = document.getElementById("contact-form");
+    if (!form || typeof emailjs === "undefined") return;
+  
+    emailjs.init("hhjmASGDBIW9kF7ig");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const btn = form.querySelector(".btn-submit");
+      if (btn) btn.disabled = true;
+  
+      Promise.all([
+        // Send to Admin
+        emailjs.sendForm("service_6a5mlge", "template_d72w4o5", form),
+  
+        // Auto reply to Client
+        emailjs.sendForm("service_6a5mlge", "template_e3x4jfb", form),
+      ])
+        .then(function () {
+          const lang = getStoredLang();
+          const t = ALBAKAR_TRANSLATIONS[lang];
+  
+          alert(t.contact.success);
+          form.reset();
+        })
+        .catch(function (error) {
+          const lang = getStoredLang();
+          const t = ALBAKAR_TRANSLATIONS[lang];
+  
+          alert(t.contact.error);
+          console.error(error);
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
+    });
+  }
+  
   
 
   function initHeaderScroll() {
