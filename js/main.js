@@ -569,15 +569,28 @@
     const yearSpan = document.getElementById("year");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
   }
-
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form || typeof emailjs === "undefined") return;
   
-    emailjs.init("_2_tQjuvQOvU73GBc");
+    emailjs.init("hhjmASGDBIW9kF7ig"); // ⚠️ غير المفتاح القديم
   
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+  
+      // 🛡️ 1) Honeypot check (كشف البوت)
+      if (form.botcheck.value !== "") {
+        alert("Bot detected ❌");
+        return;
+      }
+      // 🛡️  Rate limit (مرة كل 30 ثانية)
+      const lastTime = localStorage.getItem("lastSendTime");
+      const now = Date.now();
+      if (lastTime && now - lastTime < 30000) {
+        alert("انتظر قليلاً قبل الإرسال مرة أخرى ⏳");
+        return;
+      }
+      localStorage.setItem("lastSendTime", now);
   
       const btn = form.querySelector(".btn-submit");
       if (btn) btn.disabled = true;
@@ -595,6 +608,7 @@
   
           alert(t.contact.success);
           form.reset();
+          grecaptcha.reset(); // إعادة تعيين الكابتشا
         })
         .catch(function (error) {
           const lang = getStoredLang();
@@ -608,7 +622,6 @@
         });
     });
   }
-  
   
 
   function initHeaderScroll() {
